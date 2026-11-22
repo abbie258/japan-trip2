@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#FFFCF6">
+<title>東京 × 富士山｜2027 春日旅行手帳</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Huninn&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--paper:#FFFCF6;--ink:#3E3A39;--pink:#F2A497;--yellow:#F6D27A;--blue:#A8D3E6;--green:#B9DAA5;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Huninn,"Noto Sans TC","PingFang TC",sans-serif;line-height:1.65}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:var(--paper);border-bottom:3px solid var(--ink)}
+.nav{max-width:960px;margin:auto;display:flex;gap:10px;align-items:center;padding:9px 14px}
+.logo{white-space:nowrap;font-size:16px}
+.links{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.links a{border:2px solid var(--ink);border-radius:99px;padding:3px 11px;font-size:13px;text-decoration:none;white-space:nowrap;background:#fff;color:inherit}
+main{max-width:960px;margin:auto;padding:18px 14px 70px}
+section{margin:0 0 38px}
+h2{font-size:23px;margin:0 0 12px}
+h2:before{content:"✿ ";color:var(--pink)}
+.hero{border:3px solid var(--ink);border-radius:32px;background:#FBE6E0;padding:20px 16px 0;overflow:hidden}
+.hero small{letter-spacing:.14em;font-size:11px}
+.hero h1{font-size:clamp(32px,9vw,60px);line-height:1.2;margin:8px 0}
+.hero p{margin:4px 0 14px;font-size:14px}
+.hb{display:flex;align-items:flex-end;justify-content:space-between;gap:6px}
+.count{background:var(--yellow);border:3px solid var(--ink);border-radius:22px;padding:10px 14px;margin-bottom:20px}
+.count b{font-size:28px;display:block;line-height:1.2}
+.muted{color:#6b625d;font-size:13px}
+.hero svg{width:min(60%,420px);height:auto;overflow:visible}
+.card{border:3px solid var(--ink);border-radius:24px;background:#fff;padding:16px}
+.card h3{margin:6px 0;font-size:18px}
+.card p{margin:4px 0}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.chip{display:inline-block;border:2px solid var(--ink);border-radius:99px;padding:1px 10px;font-size:12px;background:var(--yellow)}
+.c-pink{background:var(--pink)}.c-blue{background:var(--blue)}.c-green{background:var(--green)}
+.flight{display:flex;align-items:center;justify-content:space-between;font-size:22px;margin:4px 0}
+.flight svg{width:50px}
+.note{background:#FFF1CF;border:2px solid var(--ink);border-radius:16px;padding:10px 13px;font-size:13px;margin:10px 0}
+.tabs{position:sticky;top:calc(env(safe-area-inset-top,0px) + 50px);z-index:20;background:var(--paper);display:flex;gap:8px;overflow-x:auto;padding:8px 2px 12px;scrollbar-width:none}
+.tab{flex:0 0 auto;min-width:62px;border:3px solid var(--ink);border-radius:18px;background:#fff;padding:5px 8px;text-align:center;cursor:pointer;font:inherit;color:inherit}
+.tab small{display:block;font-size:10px}.tab b{display:block;font-size:15px}
+.tab[aria-selected=true]{background:var(--pink);transform:translateY(-3px)}
+.tab:focus-visible,.links a:focus-visible,button:focus-visible{outline:3px dashed #b86a5b;outline-offset:2px}
+.panel{border:3px solid var(--ink);border-radius:28px;background:#fff;padding:16px;scroll-margin-top:130px}
+.panel.pop{animation:pop .45s cubic-bezier(.2,1.8,.4,1)}
+.dh{display:flex;gap:12px;align-items:center}
+.dh svg{width:96px;flex:none}
+.dh h3{margin:4px 0;font-size:21px}
+.tl{border-left:3px solid var(--ink);margin:16px 0 0 10px;padding-left:20px}
+.stop{position:relative;padding-bottom:20px}
+.stop:last-child{padding-bottom:0}
+.stop:before{content:"";position:absolute;left:-31px;top:7px;width:13px;height:13px;border:3px solid var(--ink);border-radius:50%;background:var(--yellow)}
+.stop.must:before{background:var(--pink)}
+.time{font-weight:bold}
+.stop h4{margin:2px 0;font-size:17px}
+.stop p{margin:2px 0;font-size:13px;color:#5f5753}
+.stop a{font-size:13px}
+.tag{display:inline-block;border:2px solid var(--ink);border-radius:9px;padding:0 7px;font-size:11px;margin-left:5px;background:var(--blue)}
+.tag.car{background:var(--green)}.tag.bus{background:var(--yellow)}.tag.walk{background:#fff}.tag.plane{background:#D9CCF0}
+.tag.must{background:var(--pink)}
+.dn{display:flex;justify-content:space-between;margin-top:14px;gap:8px}
+.dn button,.save{border:3px solid var(--ink);background:var(--green);border-radius:16px;padding:8px 14px;font:inherit;color:inherit;cursor:pointer}
+.dn button:disabled{opacity:.4}
+.todo{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.check{display:flex;gap:9px;align-items:flex-start;border:2px solid var(--ink);border-radius:14px;padding:9px 10px;background:#fff;cursor:pointer;font-size:14px}
+.check input{width:19px;height:19px;flex:none;margin:2px 0 0;accent-color:#7fae6a}
+.check:has(input:checked){background:#EDF6E8}
+.check:has(input:checked) span{text-decoration:line-through;color:#837a75}
+.bl{display:flex;justify-content:space-between;gap:8px;border-bottom:2px dashed #d3c9bf;padding:7px 0;font-size:14px}
+.bl:last-child{border:0}
+textarea{width:100%;min-height:110px;border:3px solid var(--ink);border-radius:18px;padding:12px;font:inherit;background:#fff;color:inherit}
+footer{text-align:center;color:#6b625d;font-size:13px}
+.f1{animation:fl 4s ease-in-out infinite}.f2{animation:fl 5s ease-in-out -1.5s infinite}.bob{animation:bob 3s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes fl{50%{transform:translateY(-7px)}}
+@keyframes bob{50%{transform:rotate(-8deg)}}
+@keyframes pop{0%{opacity:.4;transform:scale(.94) translateY(10px)}100%{opacity:1;transform:none}}
+@media(max-width:620px){.grid,.todo{grid-template-columns:1fr}.dh svg{width:78px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}html{scroll-behavior:auto}.tab[aria-selected=true]{transform:none}}
+</style>
+</head>
+<body>
+<header><nav class="nav" aria-label="主選單"><div class="logo">✿ 旅行手帳</div>
+<div class="links"><a href="#home">首頁</a><a href="#flights">航班</a><a href="#days">每日行程</a><a href="#tips">提醒</a><a href="#stays">住宿</a><a href="#before">出發前</a><a href="#luggage">行李</a><a href="#budget">預算</a><a href="#notes">筆記</a></div></nav></header>
+<main>
+<section id="home" class="hero">
+<small>OUR LITTLE JAPAN JOURNEY · 2027</small>
+<h1>東京 × 富士山<br>春日旅行手帳</h1>
+<p>3 月 5 日 – 3 月 13 日｜9 天 8 夜｜兩人旅行 ♡</p>
+<div class="hb">
+<div class="count"><span class="muted">距離出發還有</span><b id="cd">…</b><span class="muted" id="cc">春天的日本，等著我們！</span></div>
+<svg viewBox="0 0 440 280" role="img" aria-label="富士山、晴空塔、櫻花與小電車插畫"><g stroke="#3E3A39" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+<circle cx="360" cy="40" r="22" fill="#F6D27A"/>
+<path fill="#A8D3E6" d="M15 230L155 44l54 71 45-46 169 161z"/>
+<path fill="#FFFCF6" d="M109 105l46-61 54 71-29-10-19 18-17-21z"/>
+<path fill="#B9DAA5" d="M0 226Q90 194 180 226T440 224V280H0z"/>
+<g class="f1"><path fill="#F6D27A" d="M325 225V84h19v141z"/><path fill="#F2A497" d="M306 116h57v15h-57zM310 155h49v14h-49zM314 192h40v13h-40z"/><path fill="#FFFCF6" d="M321 83l13-26 13 26z"/></g>
+<g class="f2"><path fill="#F2A497" d="M43 214q0-24 24-24h61q25 0 25 24v25H43z"/><rect x="55" y="199" width="32" height="20" rx="6" fill="#FFFCF6"/><rect x="96" y="199" width="32" height="20" rx="6" fill="#FFFCF6"/><circle cx="69" cy="239" r="9" fill="#3E3A39"/><circle cx="129" cy="239" r="9" fill="#3E3A39"/></g>
+<g fill="#F2A497" class="bob"><circle cx="49" cy="74" r="11"/><circle cx="34" cy="88" r="11"/><circle cx="49" cy="102" r="11"/><circle cx="64" cy="88" r="11"/><circle cx="49" cy="88" r="6" fill="#F6D27A"/></g>
+<g fill="#F2A497" class="bob" style="animation-delay:-1.2s"><circle cx="387" cy="95" r="9"/><circle cx="374" cy="108" r="9"/><circle cx="387" cy="121" r="9"/><circle cx="400" cy="108" r="9"/><circle cx="387" cy="108" r="5" fill="#F6D27A"/></g>
+</g></svg></div>
+</section>
+
+<section id="flights"><h2>飛行小日記</h2>
+<div class="grid">
+<article class="card"><span class="chip c-pink">去程 · 3/5（五）</span><h3>台北桃園 → 東京成田</h3><div class="flight"><b>15:20 ✈ 19:20</b><svg viewBox="0 0 60 60" aria-hidden="true"><path d="M7 31L53 10 38 50 28 34z" fill="#A8D3E6" stroke="#3E3A39" stroke-width="3" stroke-linejoin="round"/></svg></div><p>長榮航空 BR196｜TPE T2 → NRT T1</p></article>
+<article class="card"><span class="chip c-blue">回程 · 3/13（六）</span><h3>東京成田 → 台北桃園</h3><div class="flight"><b>20:20 ✈ 23:25</b><svg viewBox="0 0 60 60" aria-hidden="true"><path d="M7 31L53 10 38 50 28 34z" fill="#F6D27A" stroke="#3E3A39" stroke-width="3" stroke-linejoin="round"/></svg></div><p>長榮航空 BR195｜NRT T1 → TPE T2</p></article>
+</div>
+<p class="note">航班依先前討論的長榮方案展示，尚非已購票資訊；託運額度請以機票為準。若改選其他航空，請同步更新航班與航廈。</p></section>
+
+<section id="days"><h2>一天一頁・旅行日記</h2>
+<p class="muted">點日期切換當天行程。時間均為初步安排，非已訂位時間。</p>
+<div class="tabs" id="tabs" role="tablist" aria-label="選擇旅行日期"></div>
+<article class="panel" id="panel" role="tabpanel" aria-live="polite"></article>
+<div class="dn"><button id="prev" type="button">← 前一天</button><span class="muted" id="pos" style="align-self:center"></span><button id="next" type="button">後一天 →</button></div></section>
+
+<section id="tips"><h2>旅行檢查・留意的事</h2>
+<div class="grid">
+<article class="card"><span class="chip c-pink">優先確認</span><h3>3/11 河口湖取車</h3><p>淺草到新宿、搭巴士到河口湖再辦理租車，很難「9 點出發、10 點取車」。已改為較早出發版本，午餐與神社可能需取捨。</p></article>
+<article class="card"><span class="chip">優先確認</span><h3>3/13 還車與成田報到</h3><p>確認還車地點與接駁方式，避免御殿場到成田塞車。國際線建議預留約 3 小時。</p></article>
+<article class="card"><span class="chip c-blue">提前預約</span><h3>哈利波特影城・熱門餐廳</h3><p>影城先選入場時段；極味屋、梅丘壽司美登利要確認候位規則。3/10 谷中商店有週三休息風險。</p></article>
+<article class="card"><span class="chip c-green">保留彈性</span><h3>富士山能見度・雨備</h3><p>富士山被雲遮住時可調整拍照與購物順序。山區 3 月仍可能結冰，租車請確認冬季胎與保險。</p></article>
+<article class="card"><span class="chip">建議補上</span><h3>東京最後一晚整理行李</h3><p>3/10 晚上先整理購物品，隔天輕裝到河口湖。也可詢問淺草飯店能否寄送大件行李。</p></article>
+<article class="card"><span class="chip c-pink">行程提醒</span><h3>3/14 清晨路跑</h3><p>抵台後隔天 05:40 就要路跑，需考慮機場到台北的交通與休息時間，睡眠可能非常不足。</p></article>
+</div></section>
+
+<section id="stays"><h2>我們的住宿小屋</h2>
+<div class="grid">
+<article class="card"><span class="chip c-pink">3/5–3/11 · 6 晚</span><h3>東京｜淺草簪飯店</h3><p>搭電車探索淺草、澀谷、新宿。</p><p class="muted">與長榮機票以「機加酒」計價，兩人參考價 NT$56,726（含機票）</p><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=%E6%B7%BA%E8%8D%89%E7%B0%AA%E9%A3%AF%E5%BA%97">地圖搜尋 ↗</a></article>
+<article class="card"><span class="chip c-blue">3/11–3/12 · 1 晚</span><h3>河口湖｜FUJIGUMI</h3><p><b>NT$4,637／兩人一晚</b></p><p class="muted">房型、溫泉設備及訂房狀態待核對。</p><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=FUJIGUMI+Kawaguchiko">地圖搜尋 ↗</a></article>
+<article class="card"><span class="chip c-green">3/12–3/13 · 1 晚</span><h3>御殿場｜HOTEL CLAD</h3><p><b>NT$5,266／兩人一晚</b></p><p class="muted">靠近御殿場 Premium Outlets。</p><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=HOTEL+CLAD+Gotemba">地圖搜尋 ↗</a></article>
+</div></section>
+
+<section id="before"><h2>出發前的小任務</h2><div class="todo" id="g-before"></div></section>
+
+<section id="luggage"><h2>行李打包清單</h2>
+<div class="grid"><div class="card"><h3>衣物與生活用品</h3><div class="todo" style="grid-template-columns:1fr" id="g-clothes"></div></div>
+<div class="card"><h3>重要物品與 3C</h3><div class="todo" style="grid-template-columns:1fr" id="g-ess"></div></div></div>
+<p class="note">3 月富士山地區偏冷，建議帶保暖外套；東京約 5～14°C，早晚溫差大，洋蔥式穿搭最方便。24 吋行李箱通常需託運，請確認託運額度與隨身液體限制。</p></section>
+
+<section id="budget"><h2>兩人的旅費筆記</h2>
+<div class="grid"><div class="card"><h3>已選方案</h3>
+<div class="bl"><span>機票＋東京飯店 6 晚</span><b>NT$56,726</b></div><div class="bl"><span>河口湖 FUJIGUMI</span><b>NT$4,637</b></div><div class="bl"><span>御殿場 HOTEL CLAD</span><b>NT$5,266</b></div><div class="bl"><span>機票＋住宿小計</span><b>NT$66,629</b></div></div>
+<div class="card"><h3>其他支出預留</h3>
+<div class="bl"><span>日本交通（含租車）</span><span>17,000～21,000</span></div><div class="bl"><span>餐飲</span><span>9,000～14,000</span></div><div class="bl"><span>門票／雜支</span><span>3,000～6,000</span></div><div class="bl"><span>全程兩人粗估</span><b>95,629～107,629</b></div><p class="muted">不含購物及台灣交通，均為規劃估算。</p></div></div></section>
+
+<section id="notes"><h2>我們一起討論 ♡</h2>
+<div class="card"><p class="muted">寫下想吃、想買、想改的行程。筆記只存在你自己的瀏覽器，不會同步給另一個人，建議截圖或傳訊息給對方。</p>
+<label for="nt" class="muted">旅行備忘錄</label>
+<textarea id="nt" placeholder="例如：3/8 壽司想訂幾點？／Outlet 想逛的品牌…"></textarea>
+<p><button class="save" id="sv" type="button">儲存筆記 ♡</button> <span class="muted" id="st" aria-live="polite"></span></p></div></section>
+<footer><div style="font-size:22px;letter-spacing:8px">✿ ♡ ✿</div><p>願我們有一趟可愛又自在的春日旅行。</p></footer>
+</main>
+<script>
+const WJ={一:"月曜日",二:"火曜日",三:"水曜日",四:"木曜日",五:"金曜日",六:"土曜日",日:"日曜日"};
+const LB={train:"電車",walk:"步行",bus:"巴士",car:"自駕",plane:"飛機"};
+const days=[
+{d:"3/5",w:"五",t:"飛往東京・入住淺草",i:"plane",s:[["15:20","桃園機場出發","plane","長榮 BR196",1],["19:20","抵達成田機場","train","入境、領行李、前往淺草"],["22:00","入住淺草簪飯店","walk","請確認最晚入住時間",1]]},
+{d:"3/6",w:"六",t:"原宿・表參道・澀谷",i:"city",s:[["08:30","明治神宮","train","從淺草搭車前往原宿",1],["10:15","竹下通・原宿","walk","小店與街景散步"],["12:30","表參道・貓街","walk","逛街、拍照"],["15:00","澀谷 PARCO・十字路口","train","購物與城市景色",1],["18:00","極味屋漢堡排","walk","需預留排隊時間",1]]},
+{d:"3/7",w:"日",t:"淺草・晴空塔・上野",i:"temple",s:[["08:30","淺草寺・仲見世","walk","順路吃淺草炸牛肉餅",1],["11:00","隅田川步道","walk","河景與晴空塔拍照",1],["12:00","東京晴空塔・Solamachi","walk","午餐與購物"],["15:00","上野恩賜公園","train","公園散步"],["17:00","阿美橫丁","walk","逛街與晚餐"]]},
+{d:"3/8",w:"一",t:"築地・銀座・東京鐵塔",i:"tower",s:[["09:00","築地場外市場","train","先吃少量小吃"],["11:30","梅丘壽司美登利（銀座）","walk","候位及訂位規則需先確認",1],["14:00","銀座購物","walk","商店街與咖啡"],["16:30","烏森神社","train","順路參拜"],["18:00","東京鐵塔","train","夕陽至夜景時段",1]]},
+{d:"3/9",w:"二",t:"哈利波特・池袋・新宿",i:"magic",s:[["09:30","華納兄弟哈利波特影城","train","預留 4～5 小時，需提前購票",1],["15:30","池袋","train","逛街、晚餐"],["18:30","新宿","train","感受夜晚街景"],["20:00","思出橫丁","walk","小巷拍照與餐飲",1]]},
+{d:"3/10",w:"三",t:"谷中銀座・秋葉原・東京站",i:"train",s:[["10:00","谷中銀座","train","部分商家週三可能休息"],["10:30","やなかしっぽや","walk","貓尾巴造型甜點",1],["13:00","秋葉原","train","動漫、模型與電器"],["16:30","東京車站・丸之內","train","逛街、拍建築；晚上整理行李"]]},
+{d:"3/11",w:"四",t:"河口湖・富士山小旅行",i:"fuji",s:[["06:30","淺草出發 → 新宿","train","前往新宿高速巴士總站"],["07:30","新宿 → 河口湖","bus","約 2 小時；須預訂班次"],["10:00","河口湖站附近取車","car","預留辦理 30～45 分鐘"],["11:00","富士山 Lawson","car","經典拍照點，注意交通",1],["11:30","富士山世界遺產中心","car","以紀念品購物為主"],["12:15","山麓園爐端燒","car","午餐",1],["14:00","本町二丁目商店街","car","富士山街景拍照",1],["14:40","小室淺間神社","car","參拜與散步"],["15:30","河口淺間神社","car","參觀古杉木林",1],["16:30","FUJIGUMI 入住","car","景點多，入住可能延後",1]]},
+{d:"3/12",w:"五",t:"富士市・沼津・御殿場",i:"fuji",s:[["08:00","河口湖早餐・退房","car","預留整理行李時間"],["10:30","富士山夢之大橋","car","確認合法停車位置",1],["11:15","沼津 Donguri 甜點店","car","水流送餐的復古甜點店",1],["14:30","御殿場 Premium Outlets","car","購物與富士山景色",1],["20:00","HOTEL CLAD 入住","walk","逛街後休息"]]},
+{d:"3/13",w:"六",t:"成田機場・回台灣",i:"plane",s:[["08:00","HOTEL CLAD 退房","car","建議提早出發"],["09:30","御殿場 → 成田機場","car","約 2.5～4 小時以上，計入塞車與休息"],["15:30","抵達成田・完成還車","car","還車與接駁需預留時間",1],["20:20","成田機場起飛","plane","長榮 BR195"],["23:25","抵達桃園機場","plane","隔天清晨有路跑"]]},
+{d:"3/14",w:"日",t:"回到台灣・路跑日",i:"city",s:[["05:40","台北路跑活動","walk","請確認報到與交通",1],["09:00","早餐・休息","walk","賽後補充水分"],["上午","返程與整理行李","car","依體力與住宿安排調整"]]}
+];
+const S='stroke="#3E3A39" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
+const ART={
+fuji:`<path ${S} d="M4 93L70 8l65 85" fill="#A8D3E6"/><path ${S} d="M48 37L70 8l23 30-14-4-9 8-9-9z" fill="#FFFCF6"/><path ${S} d="M0 91q36-16 70 0t70 0v19H0z" fill="#B9DAA5"/>`,
+plane:`<path ${S} d="M15 76L122 18 86 95 64 64z" fill="#A8D3E6"/><path d="M15 25q15-13 28 0M92 100q15-12 28 0" fill="none" stroke="#F2A497" stroke-width="5" stroke-linecap="round"/>`,
+temple:`<path ${S} d="M20 43h100L70 12z" fill="#F2A497"/><path ${S} d="M32 43v50h76V43" fill="#FFFCF6"/><path ${S} d="M51 93V61h38v32" fill="#F6D27A"/><path ${S} d="M12 97h116"/>`,
+tower:`<path ${S} d="M70 8l30 90H40z" fill="#F2A497"/><path ${S} d="M54 52h32M47 76h46" /><path ${S} d="M5 100h130"/>`,
+magic:`<path ${S} d="M20 100l70-70" /><path ${S} d="M96 14l5 12 12 5-12 5-5 12-5-12-12-5 12-5z" fill="#F6D27A"/><path ${S} d="M30 60l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" fill="#A8D3E6"/>`,
+train:`<rect ${S} x="22" y="30" width="96" height="55" rx="14" fill="#B9DAA5"/><rect ${S} x="34" y="42" width="30" height="22" rx="5" fill="#FFFCF6"/><rect ${S} x="76" y="42" width="30" height="22" rx="5" fill="#FFFCF6"/><circle ${S} cx="44" cy="92" r="8" fill="#F6D27A"/><circle ${S} cx="96" cy="92" r="8" fill="#F6D27A"/>`,
+city:`<rect ${S} x="19" y="35" width="38" height="66" rx="4" fill="#A8D3E6"/><rect ${S} x="70" y="14" width="43" height="87" rx="4" fill="#F2A497"/><path ${S} d="M30 52h15M30 68h15M30 84h15M82 32h15M82 48h15M82 64h15M82 80h15"/><path ${S} d="M5 102h130"/>`
+};
+let cur=0;
+const tabs=document.getElementById("tabs"),panel=document.getElementById("panel");
+function show(i,pop=true){
+  cur=i;const x=days[i];
+  [...tabs.children].forEach((b,j)=>{b.setAttribute("aria-selected",j===i);b.tabIndex=j===i?0:-1});
+  panel.innerHTML=`<div class="dh"><svg viewBox="0 0 140 110" aria-hidden="true">${ART[x.i]}</svg><div><span class="chip c-pink">DAY ${i+1} · ${x.d}（${WJ[x.w]}）</span><h3>${x.t}</h3></div></div><div class="tl">${x.s.map(s=>`<div class="stop${s[4]?" must":""}"><span class="time">${s[0]}</span><span class="tag ${s[2]}">${LB[s[2]]}</span>${s[4]?'<span class="tag must">♥ 必去</span>':""}<h4>${s[1]}</h4><p>${s[3]}</p><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(s[1].replace(/（.*?）/g,""))}">查看地圖 ↗</a></div>`).join("")}</div>`;
+  panel.classList.remove("pop");void panel.offsetWidth;if(pop)panel.classList.add("pop");
+  document.getElementById("pos").textContent=`${i+1} / ${days.length}`;
+  document.getElementById("prev").disabled=i===0;document.getElementById("next").disabled=i===days.length-1;
+  tabs.children[i].scrollIntoView({block:"nearest",inline:"center"});
+}
+days.forEach((x,i)=>{const b=document.createElement("button");b.type="button";b.className="tab";b.setAttribute("role","tab");b.innerHTML=`<small>DAY ${i+1}</small><b>${x.d}</b><small>${x.w}</small>`;b.onclick=()=>show(i);tabs.append(b)});
+document.getElementById("prev").onclick=()=>cur>0&&show(cur-1);
+document.getElementById("next").onclick=()=>cur<days.length-1&&show(cur+1);
+show(0,false);
+const G={"g-before":["確認機票與兩人護照效期","確認淺草簪飯店機加酒內容","確認 FUJIGUMI 訂房","確認 HOTEL CLAD 訂房","預訂河口湖租車與還車地點","確認租車保險、冬季胎及駕照譯本","預約哈利波特影城門票","預訂東京往河口湖交通","確認旅遊保險與網路方案","填寫 Visit Japan Web","確認 3/13 回台與 3/14 路跑銜接"],
+"g-clothes":["內衣褲與襪子","保暖上衣與褲子","外套／圍巾","睡衣","好走的鞋","個人盥洗用品","保養品與化妝品","常備藥與衛生用品"],
+"g-ess":["護照","台灣身分證與駕照","日本駕照日文譯本（自駕）","機票與訂房資料","信用卡／日幣","手機與充電線","行動電源（隨身登機）","相機與記憶卡","旅行轉接頭","雨傘與環保袋"]};
+const ls={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v);return true}catch(e){return false}}};
+for(const[id,arr]of Object.entries(G)){const r=document.getElementById(id);arr.forEach((t,i)=>{const k="jp27-"+id+i,l=document.createElement("label");l.className="check";const c=document.createElement("input");c.type="checkbox";c.checked=ls.get(k)==="1";c.onchange=()=>ls.set(k,c.checked?"1":"0");const s=document.createElement("span");s.textContent=t;l.append(c,s);r.append(l)})}
+const nt=document.getElementById("nt");nt.value=ls.get("jp27-notes")||"";
+document.getElementById("sv").onclick=()=>{document.getElementById("st").textContent=ls.set("jp27-notes",nt.value)?"已儲存在這台裝置 ♡":"無法儲存，請先複製備份"};
+const df=new Date("2027-03-05T00:00:00+09:00")-new Date();
+document.getElementById("cd").textContent=df>0?Math.ceil(df/864e5)+" 天":"旅程開始 ♡";
+</script>
+</body>
+</html>
